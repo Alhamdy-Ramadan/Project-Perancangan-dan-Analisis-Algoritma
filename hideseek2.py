@@ -54,7 +54,7 @@ def create_border(maze):
 
 # fungsi untuk mendefinisikan map yg terhubung jalan dg backtracking
 def generate_maze(width, height):
-    # Membuat labirin dengan seluruh tembok
+    # Membuat peta dengan seluruh tembok
     maze = [[0] * width for _ in range(height)]
 
     # Posisi awal dan akhir jalan
@@ -83,7 +83,7 @@ def generate_maze(width, height):
 
     return (maze)
 
-# Grid labirin
+# Grid peta
 map = generate_maze(50,50)
 print(map)
 
@@ -200,7 +200,7 @@ def get_viewable_map():
 
     return viewable_map
 
-# Fungsi untuk menggambar labirin
+# Fungsi untuk menggambar peta
 def draw_map():
 
     map_surface = pygame.Surface((window_width, window_height))
@@ -591,5 +591,5 @@ while running:
                             view_mode = GREEN_VIEW
                             print(f"changed to {view_mode}")
       
-    # Menggambar labirin
+    # Menggambar peta
     pygame.display.flip()
